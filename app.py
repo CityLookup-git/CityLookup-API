@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from data_loader import DataLoader
 
 app = Flask(__name__)
+CORS(app)
 
 # Load datasets from specified folder when the app starts
 data_loader = DataLoader('datasets')
